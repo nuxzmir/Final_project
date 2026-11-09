@@ -24,6 +24,21 @@ namespace Дипломочка
             }
         }
 
+        public decimal GetTotalStockValue()
+        {
+            using var connection = new SqliteConnection(connectionString);
+            connection.Open();
+
+            string query = @"
+        SELECT COALESCE(SUM(Quantity * Price), 0)
+        FROM Products";
+
+            using var command = new SqliteCommand(query, connection);
+
+            return Convert.ToDecimal(command.ExecuteScalar());
+        }
+
+
         public int GetCategoryCount()
         {
             using (var connection =

@@ -33,7 +33,6 @@
             btnHistory = new Button();
             btnExpense = new Button();
             btnIncome = new Button();
-            btnSuppliers = new Button();
             btnCategories = new Button();
             btnProducts = new Button();
             btnHome = new Button();
@@ -57,11 +56,9 @@
             btnSearch = new Button();
             txtSearch = new TextBox();
             frameProductsInfo = new Panel();
-            lblQuantityCount2 = new Label();
             lblCategoriesCount2 = new Label();
             lblPriceCount2 = new Label();
             lblCategoriesText2 = new Label();
-            lblQuantityText2 = new Label();
             lblPriceText2 = new Label();
             lblProductsText2 = new Label();
             lblProductsCount2 = new Label();
@@ -125,14 +122,13 @@
             panelMenu.Controls.Add(btnHistory);
             panelMenu.Controls.Add(btnExpense);
             panelMenu.Controls.Add(btnIncome);
-            panelMenu.Controls.Add(btnSuppliers);
             panelMenu.Controls.Add(btnCategories);
             panelMenu.Controls.Add(btnProducts);
             panelMenu.Controls.Add(btnHome);
-            panelMenu.Location = new Point(14, 145);
+            panelMenu.Location = new Point(13, 288);
             panelMenu.Margin = new Padding(4, 3, 4, 3);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(257, 430);
+            panelMenu.Size = new Size(257, 367);
             panelMenu.TabIndex = 0;
             panelMenu.Tag = "panelMenu";
             panelMenu.Paint += panelMenu_Paint;
@@ -144,7 +140,7 @@
             btnHistory.FlatStyle = FlatStyle.Flat;
             btnHistory.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnHistory.ForeColor = Color.White;
-            btnHistory.Location = new Point(12, 365);
+            btnHistory.Location = new Point(14, 305);
             btnHistory.Margin = new Padding(4, 3, 4, 3);
             btnHistory.Name = "btnHistory";
             btnHistory.Size = new Size(233, 52);
@@ -160,7 +156,7 @@
             btnExpense.FlatStyle = FlatStyle.Flat;
             btnExpense.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnExpense.ForeColor = Color.White;
-            btnExpense.Location = new Point(12, 306);
+            btnExpense.Location = new Point(14, 246);
             btnExpense.Margin = new Padding(4, 3, 4, 3);
             btnExpense.Name = "btnExpense";
             btnExpense.Size = new Size(233, 52);
@@ -176,7 +172,7 @@
             btnIncome.FlatStyle = FlatStyle.Flat;
             btnIncome.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             btnIncome.ForeColor = Color.White;
-            btnIncome.Location = new Point(12, 247);
+            btnIncome.Location = new Point(14, 187);
             btnIncome.Margin = new Padding(4, 3, 4, 3);
             btnIncome.Name = "btnIncome";
             btnIncome.Size = new Size(233, 52);
@@ -184,21 +180,6 @@
             btnIncome.Text = "📥 Income";
             btnIncome.UseVisualStyleBackColor = false;
             btnIncome.Click += btnIncome_Click;
-            // 
-            // btnSuppliers
-            // 
-            btnSuppliers.BackColor = Color.MidnightBlue;
-            btnSuppliers.FlatAppearance.BorderSize = 0;
-            btnSuppliers.FlatStyle = FlatStyle.Flat;
-            btnSuppliers.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            btnSuppliers.ForeColor = Color.White;
-            btnSuppliers.Location = new Point(12, 188);
-            btnSuppliers.Margin = new Padding(4, 3, 4, 3);
-            btnSuppliers.Name = "btnSuppliers";
-            btnSuppliers.Size = new Size(233, 52);
-            btnSuppliers.TabIndex = 4;
-            btnSuppliers.Text = "🚚 Suppliers (X)";
-            btnSuppliers.UseVisualStyleBackColor = false;
             // 
             // btnCategories
             // 
@@ -251,7 +232,7 @@
             // 
             lblLogo.AutoSize = true;
             lblLogo.Font = new Font("Avignon Pro", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLogo.Location = new Point(14, 84);
+            lblLogo.Location = new Point(23, 225);
             lblLogo.Margin = new Padding(4, 0, 4, 0);
             lblLogo.Name = "lblLogo";
             lblLogo.Size = new Size(247, 43);
@@ -272,18 +253,18 @@
             panelMain.Location = new Point(281, 14);
             panelMain.Margin = new Padding(4, 3, 4, 3);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1086, 735);
+            panelMain.Size = new Size(1610, 1015);
             panelMain.TabIndex = 2;
             panelMain.Paint += panelMain_Paint;
             // 
             // lblOperations
             // 
             lblOperations.AutoSize = true;
-            lblOperations.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblOperations.Location = new Point(20, 334);
+            lblOperations.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblOperations.Location = new Point(20, 366);
             lblOperations.Margin = new Padding(4, 0, 4, 0);
             lblOperations.Name = "lblOperations";
-            lblOperations.Size = new Size(286, 37);
+            lblOperations.Size = new Size(429, 55);
             lblOperations.TabIndex = 4;
             lblOperations.Text = "Recent Operations:";
             // 
@@ -303,11 +284,11 @@
             dgvOperations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOperations.EnableHeadersVisualStyles = false;
             dgvOperations.GridColor = Color.SkyBlue;
-            dgvOperations.Location = new Point(20, 406);
+            dgvOperations.Location = new Point(20, 436);
             dgvOperations.Margin = new Padding(4, 3, 4, 3);
             dgvOperations.Name = "dgvOperations";
             dgvOperations.ReadOnly = true;
-            dgvOperations.Size = new Size(681, 307);
+            dgvOperations.Size = new Size(1566, 556);
             dgvOperations.TabIndex = 3;
             dgvOperations.CellContentClick += dgvOperations_CellContentClick;
             // 
@@ -316,32 +297,32 @@
             frameCategories.BackColor = SystemColors.ControlLight;
             frameCategories.Controls.Add(lblCategoriesText);
             frameCategories.Controls.Add(lblCategoriesCount);
-            frameCategories.Location = new Point(386, 67);
+            frameCategories.Location = new Point(405, 67);
             frameCategories.Margin = new Padding(4, 3, 4, 3);
             frameCategories.Name = "frameCategories";
-            frameCategories.Size = new Size(315, 203);
+            frameCategories.Size = new Size(351, 245);
             frameCategories.TabIndex = 2;
             frameCategories.Paint += panel2_Paint;
             // 
             // lblCategoriesText
             // 
             lblCategoriesText.AutoSize = true;
-            lblCategoriesText.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoriesText.Location = new Point(59, 22);
+            lblCategoriesText.Font = new Font("Avignon Pro", 27.75F);
+            lblCategoriesText.Location = new Point(70, 52);
             lblCategoriesText.Margin = new Padding(4, 0, 4, 0);
             lblCategoriesText.Name = "lblCategoriesText";
-            lblCategoriesText.Size = new Size(177, 37);
+            lblCategoriesText.Size = new Size(204, 43);
             lblCategoriesText.TabIndex = 3;
             lblCategoriesText.Text = "Categories:";
             // 
             // lblCategoriesCount
             // 
             lblCategoriesCount.AutoSize = true;
-            lblCategoriesCount.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoriesCount.Location = new Point(139, 92);
+            lblCategoriesCount.Font = new Font("Avignon Pro", 27.75F);
+            lblCategoriesCount.Location = new Point(153, 140);
             lblCategoriesCount.Margin = new Padding(4, 0, 4, 0);
             lblCategoriesCount.Name = "lblCategoriesCount";
-            lblCategoriesCount.Size = new Size(34, 40);
+            lblCategoriesCount.Size = new Size(37, 43);
             lblCategoriesCount.TabIndex = 2;
             lblCategoriesCount.Text = "0";
             // 
@@ -350,20 +331,20 @@
             frameStock.BackColor = SystemColors.ControlLight;
             frameStock.Controls.Add(lblLowStockText);
             frameStock.Controls.Add(lblLowStockCount);
-            frameStock.Location = new Point(742, 67);
+            frameStock.Location = new Point(784, 67);
             frameStock.Margin = new Padding(4, 3, 4, 3);
             frameStock.Name = "frameStock";
-            frameStock.Size = new Size(315, 203);
+            frameStock.Size = new Size(351, 245);
             frameStock.TabIndex = 2;
             // 
             // lblLowStockText
             // 
             lblLowStockText.AutoSize = true;
-            lblLowStockText.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLowStockText.Location = new Point(53, 22);
+            lblLowStockText.Font = new Font("Avignon Pro", 27.75F);
+            lblLowStockText.Location = new Point(51, 52);
             lblLowStockText.Margin = new Padding(4, 0, 4, 0);
             lblLowStockText.Name = "lblLowStockText";
-            lblLowStockText.Size = new Size(212, 37);
+            lblLowStockText.Size = new Size(240, 43);
             lblLowStockText.TabIndex = 5;
             lblLowStockText.Text = "Low On Stock:";
             lblLowStockText.Click += lblLowStockText_Click;
@@ -371,11 +352,11 @@
             // lblLowStockCount
             // 
             lblLowStockCount.AutoSize = true;
-            lblLowStockCount.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLowStockCount.Location = new Point(139, 92);
+            lblLowStockCount.Font = new Font("Avignon Pro", 27.75F);
+            lblLowStockCount.Location = new Point(151, 144);
             lblLowStockCount.Margin = new Padding(4, 0, 4, 0);
             lblLowStockCount.Name = "lblLowStockCount";
-            lblLowStockCount.Size = new Size(34, 40);
+            lblLowStockCount.Size = new Size(37, 43);
             lblLowStockCount.TabIndex = 4;
             lblLowStockCount.Text = "0";
             // 
@@ -387,18 +368,18 @@
             frameProducts.Location = new Point(27, 67);
             frameProducts.Margin = new Padding(4, 3, 4, 3);
             frameProducts.Name = "frameProducts";
-            frameProducts.Size = new Size(315, 203);
+            frameProducts.Size = new Size(351, 245);
             frameProducts.TabIndex = 1;
             frameProducts.Paint += panelProducts_Paint;
             // 
             // lblProductsText
             // 
             lblProductsText.AutoSize = true;
-            lblProductsText.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsText.Location = new Point(61, 22);
+            lblProductsText.Font = new Font("Avignon Pro", 27.75F);
+            lblProductsText.Location = new Point(73, 52);
             lblProductsText.Margin = new Padding(4, 0, 4, 0);
             lblProductsText.Name = "lblProductsText";
-            lblProductsText.Size = new Size(168, 37);
+            lblProductsText.Size = new Size(192, 43);
             lblProductsText.TabIndex = 1;
             lblProductsText.Text = "Total Items:";
             lblProductsText.Click += lblProductsText_Click;
@@ -406,11 +387,11 @@
             // lblProductsCount
             // 
             lblProductsCount.AutoSize = true;
-            lblProductsCount.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsCount.Location = new Point(140, 92);
+            lblProductsCount.Font = new Font("Avignon Pro", 27.75F);
+            lblProductsCount.Location = new Point(151, 144);
             lblProductsCount.Margin = new Padding(4, 0, 4, 0);
             lblProductsCount.Name = "lblProductsCount";
-            lblProductsCount.Size = new Size(34, 40);
+            lblProductsCount.Size = new Size(37, 43);
             lblProductsCount.TabIndex = 0;
             lblProductsCount.Text = "0";
             lblProductsCount.Click += lblProductsCount_Click;
@@ -450,7 +431,7 @@
             panelProducts.Controls.Add(lblPrice);
             panelProducts.Location = new Point(281, 14);
             panelProducts.Name = "panelProducts";
-            panelProducts.Size = new Size(1088, 735);
+            panelProducts.Size = new Size(1611, 1015);
             panelProducts.TabIndex = 3;
             panelProducts.Visible = false;
             panelProducts.Paint += panelProducts_Paint_1;
@@ -468,21 +449,21 @@
             // cmbSort
             // 
             cmbSort.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbSort.Font = new Font("Avignon Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbSort.Font = new Font("Avignon Pro", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSort.FormattingEnabled = true;
             cmbSort.Items.AddRange(new object[] { "Newest first", "Name (A-Z)", "Price (low to high)", "Price (high to low)", "Quantity (low to high)", "Quantity (high to low)" });
-            cmbSort.Location = new Point(390, 117);
+            cmbSort.Location = new Point(653, 91);
             cmbSort.Name = "cmbSort";
-            cmbSort.Size = new Size(257, 36);
+            cmbSort.Size = new Size(349, 51);
             cmbSort.TabIndex = 21;
             cmbSort.SelectedIndexChanged += cmbSort_SelectedIndexChanged;
             // 
             // btnSearch
             // 
-            btnSearch.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(921, 112);
+            btnSearch.Font = new Font("Avignon Pro", 36F);
+            btnSearch.Location = new Point(1350, 76);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(150, 44);
+            btnSearch.Size = new Size(189, 70);
             btnSearch.TabIndex = 20;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
@@ -490,125 +471,102 @@
             // 
             // txtSearch
             // 
-            txtSearch.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearch.Location = new Point(653, 112);
+            txtSearch.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.Location = new Point(1008, 81);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Search...";
-            txtSearch.Size = new Size(262, 44);
+            txtSearch.Size = new Size(336, 63);
             txtSearch.TabIndex = 19;
             // 
             // frameProductsInfo
             // 
             frameProductsInfo.BackColor = SystemColors.ControlLight;
-            frameProductsInfo.Controls.Add(lblQuantityCount2);
             frameProductsInfo.Controls.Add(lblCategoriesCount2);
             frameProductsInfo.Controls.Add(lblPriceCount2);
             frameProductsInfo.Controls.Add(lblCategoriesText2);
-            frameProductsInfo.Controls.Add(lblQuantityText2);
             frameProductsInfo.Controls.Add(lblPriceText2);
             frameProductsInfo.Controls.Add(lblProductsText2);
             frameProductsInfo.Controls.Add(lblProductsCount2);
-            frameProductsInfo.Location = new Point(20, 76);
+            frameProductsInfo.Location = new Point(41, 148);
             frameProductsInfo.Margin = new Padding(4, 3, 4, 3);
             frameProductsInfo.Name = "frameProductsInfo";
-            frameProductsInfo.Size = new Size(344, 194);
+            frameProductsInfo.Size = new Size(563, 190);
             frameProductsInfo.TabIndex = 2;
-            // 
-            // lblQuantityCount2
-            // 
-            lblQuantityCount2.AutoSize = true;
-            lblQuantityCount2.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuantityCount2.Location = new Point(230, 97);
-            lblQuantityCount2.Margin = new Padding(4, 0, 4, 0);
-            lblQuantityCount2.Name = "lblQuantityCount2";
-            lblQuantityCount2.Size = new Size(34, 40);
-            lblQuantityCount2.TabIndex = 23;
-            lblQuantityCount2.Text = "0";
             // 
             // lblCategoriesCount2
             // 
             lblCategoriesCount2.AutoSize = true;
-            lblCategoriesCount2.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoriesCount2.Location = new Point(272, 60);
+            lblCategoriesCount2.Font = new Font("Avignon Pro", 36F);
+            lblCategoriesCount2.Location = new Point(340, 70);
             lblCategoriesCount2.Margin = new Padding(4, 0, 4, 0);
             lblCategoriesCount2.Name = "lblCategoriesCount2";
-            lblCategoriesCount2.Size = new Size(34, 40);
+            lblCategoriesCount2.Size = new Size(48, 55);
             lblCategoriesCount2.TabIndex = 24;
             lblCategoriesCount2.Text = "0";
             // 
             // lblPriceCount2
             // 
             lblPriceCount2.AutoSize = true;
-            lblPriceCount2.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPriceCount2.Location = new Point(182, 135);
+            lblPriceCount2.Font = new Font("Avignon Pro", 36F);
+            lblPriceCount2.Location = new Point(261, 127);
             lblPriceCount2.Margin = new Padding(4, 0, 4, 0);
             lblPriceCount2.Name = "lblPriceCount2";
-            lblPriceCount2.Size = new Size(34, 40);
+            lblPriceCount2.Size = new Size(48, 55);
             lblPriceCount2.TabIndex = 5;
             lblPriceCount2.Text = "0";
+            lblPriceCount2.Click += lblPriceCount2_Click;
             // 
             // lblCategoriesText2
             // 
             lblCategoriesText2.AutoSize = true;
-            lblCategoriesText2.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoriesText2.Location = new Point(15, 60);
+            lblCategoriesText2.Font = new Font("Avignon Pro", 36F);
+            lblCategoriesText2.Location = new Point(15, 15);
             lblCategoriesText2.Margin = new Padding(4, 0, 4, 0);
             lblCategoriesText2.Name = "lblCategoriesText2";
-            lblCategoriesText2.Size = new Size(249, 37);
+            lblCategoriesText2.Size = new Size(373, 55);
             lblCategoriesText2.TabIndex = 4;
             lblCategoriesText2.Text = "Total Categories:";
-            // 
-            // lblQuantityText2
-            // 
-            lblQuantityText2.AutoSize = true;
-            lblQuantityText2.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQuantityText2.Location = new Point(15, 97);
-            lblQuantityText2.Margin = new Padding(4, 0, 4, 0);
-            lblQuantityText2.Name = "lblQuantityText2";
-            lblQuantityText2.Size = new Size(214, 37);
-            lblQuantityText2.TabIndex = 3;
-            lblQuantityText2.Text = "Total Quantity:";
             // 
             // lblPriceText2
             // 
             lblPriceText2.AutoSize = true;
-            lblPriceText2.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPriceText2.Location = new Point(15, 134);
+            lblPriceText2.Font = new Font("Avignon Pro", 36F);
+            lblPriceText2.Location = new Point(15, 125);
             lblPriceText2.Margin = new Padding(4, 0, 4, 0);
             lblPriceText2.Name = "lblPriceText2";
-            lblPriceText2.Size = new Size(164, 37);
+            lblPriceText2.Size = new Size(247, 55);
             lblPriceText2.TabIndex = 2;
             lblPriceText2.Text = "Total Price:";
             // 
             // lblProductsText2
             // 
             lblProductsText2.AutoSize = true;
-            lblProductsText2.Font = new Font("Avignon Pro", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsText2.Location = new Point(15, 23);
+            lblProductsText2.Font = new Font("Avignon Pro", 36F);
+            lblProductsText2.Location = new Point(15, 70);
             lblProductsText2.Margin = new Padding(4, 0, 4, 0);
             lblProductsText2.Name = "lblProductsText2";
-            lblProductsText2.Size = new Size(215, 37);
+            lblProductsText2.Size = new Size(325, 55);
             lblProductsText2.TabIndex = 1;
             lblProductsText2.Text = "Total Products:";
             // 
             // lblProductsCount2
             // 
             lblProductsCount2.AutoSize = true;
-            lblProductsCount2.Font = new Font("Avignon Pro", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsCount2.Location = new Point(238, 20);
+            lblProductsCount2.Font = new Font("Avignon Pro", 36F);
+            lblProductsCount2.Location = new Point(386, 15);
             lblProductsCount2.Margin = new Padding(4, 0, 4, 0);
             lblProductsCount2.Name = "lblProductsCount2";
-            lblProductsCount2.Size = new Size(34, 40);
+            lblProductsCount2.Size = new Size(48, 55);
             lblProductsCount2.TabIndex = 0;
             lblProductsCount2.Text = "0";
             lblProductsCount2.Click += label3_Click;
             // 
             // btnDeleteProduct
             // 
-            btnDeleteProduct.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDeleteProduct.Location = new Point(819, 663);
+            btnDeleteProduct.Font = new Font("Avignon Pro", 36F);
+            btnDeleteProduct.Location = new Point(1140, 898);
             btnDeleteProduct.Name = "btnDeleteProduct";
-            btnDeleteProduct.Size = new Size(248, 59);
+            btnDeleteProduct.Size = new Size(375, 94);
             btnDeleteProduct.TabIndex = 18;
             btnDeleteProduct.Text = "Delete Selected";
             btnDeleteProduct.UseVisualStyleBackColor = true;
@@ -616,10 +574,10 @@
             // 
             // btnEditProduct
             // 
-            btnEditProduct.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEditProduct.Location = new Point(582, 663);
+            btnEditProduct.Font = new Font("Avignon Pro", 36F);
+            btnEditProduct.Location = new Point(678, 898);
             btnEditProduct.Name = "btnEditProduct";
-            btnEditProduct.Size = new Size(219, 59);
+            btnEditProduct.Size = new Size(375, 94);
             btnEditProduct.TabIndex = 17;
             btnEditProduct.Text = "Edit Selected";
             btnEditProduct.UseVisualStyleBackColor = true;
@@ -628,10 +586,10 @@
             // lblProductsDGV
             // 
             lblProductsDGV.AutoSize = true;
-            lblProductsDGV.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsDGV.Location = new Point(389, 74);
+            lblProductsDGV.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProductsDGV.Location = new Point(653, 33);
             lblProductsDGV.Name = "lblProductsDGV";
-            lblProductsDGV.Size = new Size(191, 37);
+            lblProductsDGV.Size = new Size(290, 55);
             lblProductsDGV.TabIndex = 15;
             lblProductsDGV.Text = "Products List:";
             lblProductsDGV.Click += lblProductsDGV_Click;
@@ -641,85 +599,85 @@
             dgvProducts.AllowUserToOrderColumns = true;
             dgvProducts.BackgroundColor = SystemColors.ControlLight;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Location = new Point(386, 172);
+            dgvProducts.Location = new Point(652, 165);
             dgvProducts.Margin = new Padding(4, 3, 4, 3);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.ReadOnly = true;
-            dgvProducts.Size = new Size(681, 469);
+            dgvProducts.Size = new Size(887, 704);
             dgvProducts.TabIndex = 5;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             dgvProducts.SelectionChanged += dgvProducts_SelectionChanged;
             // 
             // txtPrice
             // 
-            txtPrice.Font = new Font("Avignon Pro", 18F);
-            txtPrice.Location = new Point(202, 544);
+            txtPrice.Font = new Font("Avignon Pro", 29.9999962F);
+            txtPrice.Location = new Point(320, 729);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(148, 35);
+            txtPrice.Size = new Size(284, 54);
             txtPrice.TabIndex = 14;
             // 
             // lblProductsTitle
             // 
             lblProductsTitle.AutoSize = true;
-            lblProductsTitle.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProductsTitle.Location = new Point(88, 297);
+            lblProductsTitle.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProductsTitle.Location = new Point(151, 378);
             lblProductsTitle.Name = "lblProductsTitle";
-            lblProductsTitle.Size = new Size(238, 37);
+            lblProductsTitle.Size = new Size(357, 55);
             lblProductsTitle.TabIndex = 5;
             lblProductsTitle.Text = "Products Edition";
             lblProductsTitle.Click += lblProductsTitle_Click;
             // 
             // txtQuantity
             // 
-            txtQuantity.Font = new Font("Avignon Pro", 18F);
-            txtQuantity.Location = new Point(202, 485);
+            txtQuantity.Font = new Font("Avignon Pro", 29.9999962F);
+            txtQuantity.Location = new Point(320, 650);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(148, 35);
+            txtQuantity.Size = new Size(284, 54);
             txtQuantity.TabIndex = 13;
             // 
             // lblProductName
             // 
             lblProductName.AutoSize = true;
-            lblProductName.Font = new Font("Avignon Pro", 18F);
-            lblProductName.Location = new Point(35, 368);
+            lblProductName.Font = new Font("Avignon Pro", 29.9999962F);
+            lblProductName.Location = new Point(35, 501);
             lblProductName.Name = "lblProductName";
-            lblProductName.Size = new Size(166, 28);
+            lblProductName.Size = new Size(277, 46);
             lblProductName.TabIndex = 6;
             lblProductName.Text = "Product name:";
             // 
             // txtCategory
             // 
-            txtCategory.Font = new Font("Avignon Pro", 18F);
-            txtCategory.Location = new Point(202, 428);
+            txtCategory.Font = new Font("Avignon Pro", 29.9999962F);
+            txtCategory.Location = new Point(320, 575);
             txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(148, 35);
+            txtCategory.Size = new Size(284, 54);
             txtCategory.TabIndex = 12;
             // 
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Font = new Font("Avignon Pro", 18F);
-            lblCategory.Location = new Point(85, 428);
+            lblCategory.Font = new Font("Avignon Pro", 29.9999962F);
+            lblCategory.Location = new Point(120, 575);
             lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(116, 28);
+            lblCategory.Size = new Size(192, 46);
             lblCategory.TabIndex = 7;
             lblCategory.Text = "Category:";
             // 
             // txtProductName
             // 
-            txtProductName.Font = new Font("Avignon Pro", 18F);
-            txtProductName.Location = new Point(202, 365);
+            txtProductName.Font = new Font("Avignon Pro", 29.9999962F);
+            txtProductName.Location = new Point(320, 501);
             txtProductName.Name = "txtProductName";
-            txtProductName.Size = new Size(148, 35);
+            txtProductName.Size = new Size(284, 54);
             txtProductName.TabIndex = 11;
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Font = new Font("Avignon Pro", 18F);
-            lblQuantity.Location = new Point(95, 485);
+            lblQuantity.Font = new Font("Avignon Pro", 29.9999962F);
+            lblQuantity.Location = new Point(133, 660);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(106, 28);
+            lblQuantity.Size = new Size(179, 46);
             lblQuantity.TabIndex = 8;
             lblQuantity.Text = "Quantity:";
             // 
@@ -727,7 +685,7 @@
             // 
             btnAddProduct.BackColor = SystemColors.ControlLightLight;
             btnAddProduct.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddProduct.Location = new Point(69, 609);
+            btnAddProduct.Location = new Point(202, 814);
             btnAddProduct.Name = "btnAddProduct";
             btnAddProduct.Size = new Size(273, 82);
             btnAddProduct.TabIndex = 10;
@@ -738,10 +696,10 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Font = new Font("Avignon Pro", 18F);
-            lblPrice.Location = new Point(131, 544);
+            lblPrice.Font = new Font("Avignon Pro", 29.9999962F);
+            lblPrice.Location = new Point(200, 730);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(70, 28);
+            lblPrice.Size = new Size(114, 46);
             lblPrice.TabIndex = 9;
             lblPrice.Text = "Price:";
             // 
@@ -752,7 +710,7 @@
             panelIncome.Controls.Add(lblIncome);
             panelIncome.Location = new Point(281, 14);
             panelIncome.Name = "panelIncome";
-            panelIncome.Size = new Size(1088, 735);
+            panelIncome.Size = new Size(1611, 1015);
             panelIncome.TabIndex = 4;
             panelIncome.Visible = false;
             // 
@@ -765,27 +723,27 @@
             frameRegIncome.Controls.Add(lblIncomeProduct);
             frameRegIncome.Controls.Add(cmbIncomeProduct);
             frameRegIncome.Controls.Add(lblIncomeQuantity);
-            frameRegIncome.Location = new Point(20, 60);
+            frameRegIncome.Location = new Point(408, 253);
             frameRegIncome.Name = "frameRegIncome";
-            frameRegIncome.Size = new Size(539, 271);
+            frameRegIncome.Size = new Size(793, 519);
             frameRegIncome.TabIndex = 7;
             // 
             // lblIncomeTitle
             // 
             lblIncomeTitle.AutoSize = true;
-            lblIncomeTitle.Font = new Font("Avignon Pro", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIncomeTitle.Location = new Point(3, 4);
+            lblIncomeTitle.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIncomeTitle.Location = new Point(214, 12);
             lblIncomeTitle.Name = "lblIncomeTitle";
-            lblIncomeTitle.Size = new Size(222, 34);
+            lblIncomeTitle.Size = new Size(362, 55);
             lblIncomeTitle.TabIndex = 1;
             lblIncomeTitle.Text = "Register Income";
             // 
             // btnRegisterIncome
             // 
-            btnRegisterIncome.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegisterIncome.Location = new Point(10, 216);
+            btnRegisterIncome.Font = new Font("Avignon Pro", 47.9999924F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegisterIncome.Location = new Point(10, 425);
             btnRegisterIncome.Name = "btnRegisterIncome";
-            btnRegisterIncome.Size = new Size(517, 44);
+            btnRegisterIncome.Size = new Size(770, 81);
             btnRegisterIncome.TabIndex = 6;
             btnRegisterIncome.Text = "Register Income";
             btnRegisterIncome.UseVisualStyleBackColor = true;
@@ -793,42 +751,42 @@
             // 
             // numIncomeQuantity
             // 
-            numIncomeQuantity.Font = new Font("Avignon Pro", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numIncomeQuantity.Location = new Point(10, 161);
+            numIncomeQuantity.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numIncomeQuantity.Location = new Point(48, 329);
             numIncomeQuantity.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
             numIncomeQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numIncomeQuantity.Name = "numIncomeQuantity";
-            numIncomeQuantity.Size = new Size(514, 32);
+            numIncomeQuantity.Size = new Size(704, 63);
             numIncomeQuantity.TabIndex = 5;
             numIncomeQuantity.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblIncomeProduct
             // 
             lblIncomeProduct.AutoSize = true;
-            lblIncomeProduct.Font = new Font("Avignon Pro", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIncomeProduct.Location = new Point(10, 49);
+            lblIncomeProduct.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIncomeProduct.Location = new Point(48, 100);
             lblIncomeProduct.Name = "lblIncomeProduct";
-            lblIncomeProduct.Size = new Size(103, 31);
+            lblIncomeProduct.Size = new Size(189, 55);
             lblIncomeProduct.TabIndex = 2;
             lblIncomeProduct.Text = "Product";
             // 
             // cmbIncomeProduct
             // 
             cmbIncomeProduct.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbIncomeProduct.Font = new Font("Avignon Pro", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbIncomeProduct.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbIncomeProduct.FormattingEnabled = true;
-            cmbIncomeProduct.Location = new Point(10, 83);
+            cmbIncomeProduct.Location = new Point(48, 163);
             cmbIncomeProduct.Name = "cmbIncomeProduct";
-            cmbIncomeProduct.Size = new Size(514, 33);
+            cmbIncomeProduct.Size = new Size(704, 63);
             cmbIncomeProduct.TabIndex = 4;
             // 
             // lblIncomeQuantity
             // 
             lblIncomeQuantity.AutoSize = true;
-            lblIncomeQuantity.Font = new Font("Avignon Pro", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIncomeQuantity.Location = new Point(10, 127);
+            lblIncomeQuantity.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIncomeQuantity.Location = new Point(48, 270);
             lblIncomeQuantity.Name = "lblIncomeQuantity";
-            lblIncomeQuantity.Size = new Size(114, 31);
+            lblIncomeQuantity.Size = new Size(207, 55);
             lblIncomeQuantity.TabIndex = 3;
             lblIncomeQuantity.Text = "Quantity";
             lblIncomeQuantity.Click += lblIncomeQuantity_Click;
@@ -850,7 +808,7 @@
             panelExpense.Controls.Add(frameRegExpense);
             panelExpense.Location = new Point(281, 14);
             panelExpense.Name = "panelExpense";
-            panelExpense.Size = new Size(1088, 735);
+            panelExpense.Size = new Size(1610, 1015);
             panelExpense.TabIndex = 5;
             panelExpense.Visible = false;
             // 
@@ -873,27 +831,28 @@
             frameRegExpense.Controls.Add(lblExpenseProduct);
             frameRegExpense.Controls.Add(cmbExpenseProduct);
             frameRegExpense.Controls.Add(lblExpenseQuantity);
-            frameRegExpense.Location = new Point(20, 60);
+            frameRegExpense.Location = new Point(408, 253);
             frameRegExpense.Name = "frameRegExpense";
-            frameRegExpense.Size = new Size(539, 271);
+            frameRegExpense.Size = new Size(793, 519);
             frameRegExpense.TabIndex = 8;
             // 
             // lblExpenseTitle
             // 
             lblExpenseTitle.AutoSize = true;
-            lblExpenseTitle.Font = new Font("Avignon Pro", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExpenseTitle.Location = new Point(3, 4);
+            lblExpenseTitle.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExpenseTitle.Location = new Point(214, 12);
             lblExpenseTitle.Name = "lblExpenseTitle";
-            lblExpenseTitle.Size = new Size(230, 34);
+            lblExpenseTitle.Size = new Size(375, 55);
             lblExpenseTitle.TabIndex = 1;
             lblExpenseTitle.Text = "Register Expense";
+            lblExpenseTitle.Click += lblExpenseTitle_Click;
             // 
             // btnRegisterExpense
             // 
-            btnRegisterExpense.Font = new Font("Avignon Pro", 23.9999962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegisterExpense.Location = new Point(10, 216);
+            btnRegisterExpense.Font = new Font("Avignon Pro", 47.9999924F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegisterExpense.Location = new Point(10, 425);
             btnRegisterExpense.Name = "btnRegisterExpense";
-            btnRegisterExpense.Size = new Size(517, 44);
+            btnRegisterExpense.Size = new Size(770, 81);
             btnRegisterExpense.TabIndex = 6;
             btnRegisterExpense.Text = "Register Expense";
             btnRegisterExpense.UseVisualStyleBackColor = true;
@@ -901,44 +860,45 @@
             // 
             // numExpenseQuantity
             // 
-            numExpenseQuantity.Font = new Font("Avignon Pro", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numExpenseQuantity.Location = new Point(10, 161);
+            numExpenseQuantity.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numExpenseQuantity.Location = new Point(48, 329);
             numExpenseQuantity.Maximum = new decimal(new int[] { 999999999, 0, 0, 0 });
             numExpenseQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numExpenseQuantity.Name = "numExpenseQuantity";
-            numExpenseQuantity.Size = new Size(514, 32);
+            numExpenseQuantity.Size = new Size(704, 63);
             numExpenseQuantity.TabIndex = 5;
             numExpenseQuantity.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblExpenseProduct
             // 
             lblExpenseProduct.AutoSize = true;
-            lblExpenseProduct.Font = new Font("Avignon Pro", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExpenseProduct.Location = new Point(10, 49);
+            lblExpenseProduct.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExpenseProduct.Location = new Point(48, 100);
             lblExpenseProduct.Name = "lblExpenseProduct";
-            lblExpenseProduct.Size = new Size(103, 31);
+            lblExpenseProduct.Size = new Size(189, 55);
             lblExpenseProduct.TabIndex = 2;
             lblExpenseProduct.Text = "Product";
             // 
             // cmbExpenseProduct
             // 
             cmbExpenseProduct.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbExpenseProduct.Font = new Font("Avignon Pro", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbExpenseProduct.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbExpenseProduct.FormattingEnabled = true;
-            cmbExpenseProduct.Location = new Point(10, 83);
+            cmbExpenseProduct.Location = new Point(48, 163);
             cmbExpenseProduct.Name = "cmbExpenseProduct";
-            cmbExpenseProduct.Size = new Size(514, 33);
+            cmbExpenseProduct.Size = new Size(704, 63);
             cmbExpenseProduct.TabIndex = 4;
             // 
             // lblExpenseQuantity
             // 
             lblExpenseQuantity.AutoSize = true;
-            lblExpenseQuantity.Font = new Font("Avignon Pro", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblExpenseQuantity.Location = new Point(10, 127);
+            lblExpenseQuantity.Font = new Font("Avignon Pro", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblExpenseQuantity.Location = new Point(48, 270);
             lblExpenseQuantity.Name = "lblExpenseQuantity";
-            lblExpenseQuantity.Size = new Size(114, 31);
+            lblExpenseQuantity.Size = new Size(207, 55);
             lblExpenseQuantity.TabIndex = 3;
             lblExpenseQuantity.Text = "Quantity";
+            lblExpenseQuantity.Click += lblExpenseQuantity_Click;
             // 
             // panelHistory
             // 
@@ -947,7 +907,7 @@
             panelHistory.Controls.Add(lblHistory);
             panelHistory.Location = new Point(281, 14);
             panelHistory.Name = "panelHistory";
-            panelHistory.Size = new Size(1088, 735);
+            panelHistory.Size = new Size(1610, 1015);
             panelHistory.TabIndex = 6;
             panelHistory.Visible = false;
             // 
@@ -957,7 +917,7 @@
             dgvHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvHistory.Location = new Point(20, 60);
             dgvHistory.Name = "dgvHistory";
-            dgvHistory.Size = new Size(1051, 653);
+            dgvHistory.Size = new Size(1566, 932);
             dgvHistory.TabIndex = 1;
             // 
             // lblHistory
@@ -975,12 +935,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1381, 763);
-            Controls.Add(panelMain);
-            Controls.Add(panelHistory);
-            Controls.Add(panelExpense);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(panelProducts);
+            Controls.Add(panelMain);
             Controls.Add(panelIncome);
+            Controls.Add(panelExpense);
+            Controls.Add(panelHistory);
             Controls.Add(panelMenu);
             Controls.Add(lblLogo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -988,7 +948,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Supply control system";
+            Text = "SCS";
             Load += Form1_Load;
             panelMenu.ResumeLayout(false);
             panelMain.ResumeLayout(false);
@@ -1031,7 +991,6 @@
         private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnExpense;
         private System.Windows.Forms.Button btnIncome;
-        private System.Windows.Forms.Button btnSuppliers;
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Panel panelMain;
@@ -1066,7 +1025,6 @@
         private Label lblProductsText2;
         private Label lblProductsCount2;
         private Label lblCategoriesText2;
-        private Label lblQuantityText2;
         private Label lblPriceText2;
         private Button btnSearch;
         private TextBox txtSearch;
@@ -1090,7 +1048,6 @@
         private ComboBox cmbExpenseProduct;
         private Label lblExpenseQuantity;
         private Label lblExpense;
-        private Label lblQuantityCount2;
         private Label lblCategoriesCount2;
         private Label lblPriceCount2;
         private Panel panelHistory;
